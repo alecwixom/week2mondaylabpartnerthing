@@ -204,7 +204,7 @@ function printAllNames (something) {
     console.log(something[i]);
   }
 }
-return printAllNames(namesArr)
+printAllNames(namesArr)
 ////////////////// PROBLEM 13 ////////////////////
 /*
   Create a function called thatsOdd that takes in a single argument (a number).
@@ -214,7 +214,14 @@ return printAllNames(namesArr)
 */
 
 //CODE HERE
-
+function thatsOdd (oneSingleNumber) {
+  if (oneSingleNumber % 2 === 0) {
+    return 'Thats not odd!'
+  } else {
+    return 'That is odd indeed!'
+  }
+}
+const oddChecker = thatsOdd(2)
 
 ////////////////// PROBLEM 14 ////////////////////
 
@@ -227,7 +234,7 @@ return printAllNames(namesArr)
 */
 
 //CODE HERE
-
+const bestMovie = (MOVEIEPARAM) => `${MOVEIEPARAM} is the best movie ever!`
 
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
