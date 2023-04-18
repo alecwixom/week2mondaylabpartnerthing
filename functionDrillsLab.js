@@ -248,8 +248,18 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
-
-
+function bigOrSmall (arr) {
+  let answers = [];
+  for (let i = 0; i <  arr.length; i++) {
+    if (arr[i] > 100) {
+      answers.push('big')
+    } else {
+      answers.push('small')
+    }
+  }
+  return answers
+}
+let arrayEvaluator = bigOrSmall(bigOrSmallArray)
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
 let loser = 'Glimmer'
@@ -269,7 +279,11 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
+function upperCase (words) {
+  words = words.toUpperCase(words)
+  console.log(words);
+}
+upperCase(sampleString)
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
@@ -281,6 +295,16 @@ let sampleString = "Hi, my name is Kylo."
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
 */
+function emailCheck(email) {
+  email = String(email).trim();
+  if (email.includes('@')) {
+    return 'email verified';
+  } else {
+    return 'must provide a valid email address';
+  }
+}
+let result = emailCheck('atwixom@gmail.com')
+
 
 ////////////////// PROBLEM 19 ////////////////////
 /*
@@ -289,7 +313,13 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+function buyChocolateFrogs(gold) {
+  const costPerFrog = 3
+  const totalFrogs = Math.floor(gold / costPerFrog)
+  return totalFrogs
+}
 
+let totalFrogs = buyChocolateFrogs(4)
 
 ////////////////// PROBLEM 20 ////////////////////
 /*
@@ -306,7 +336,17 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
-
+function arrGrabber (exArr) {
+for (i = exArr[0]; i < exArr.length; i++) {
+  if (exArr[i] < exArr[i + 1]) {
+    return true
+  } else {
+    return false
+  }
+}
+}
+ascendingArray = arrGrabber(sampleArray)
+console.log(ascendingArray);
 
 ////////////////// PROBLEM 22 ////////////////////
 
@@ -330,13 +370,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ['duck']
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ['rubberDuck']
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ['sailor']
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ['realDuck']
